@@ -2,7 +2,7 @@
 
 /* root style added for all pages */
 :root{
-    background-image: url(assets/images/starwars-cover.jpeg);
+    background-image: url(assets/images/space-1164579_1280.png);
     color: goldenrod;
     font-size: 62.5%;
    
@@ -19,6 +19,7 @@ h1 {
     font-size: 5.3rem;
     margin-bottom: 5rem;
     text-align: center;
+    text-shadow: 2px 2px 8px goldenrod; 
 }
 h2 {
    padding-bottom: 5rem;
@@ -69,7 +70,7 @@ h2 {
     text-decoration: none;
     text-align: center;
 }
-
+/* css for hover effect on the start and high score button*/
 .btn:hover{
     cursor: pointer;
    font-size: 3rem;
