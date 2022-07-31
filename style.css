@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Orbitron:wght@400;700&family=Oswald:wght@300&display=swap');
-
+/* root style added for all pages */
 :root{
     background-image: url(assets/images/starwars-cover.jpeg);
     color: goldenrod;
@@ -10,10 +10,35 @@
 *{
     box-sizing: border-box;
     font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-
+h1 {
+    font-size: 5.3rem;
+    margin-bottom: 5rem;
+}
+/* container class to center text and quiz to the center of the page*/
 .container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 80rem;
+
+}
+.container, a {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 2rem;
+}
+.flex-column {
+    display: flex;
+    flex-direction: column;
 
 }
 
