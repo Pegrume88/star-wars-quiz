@@ -29,10 +29,9 @@ h1 {
     max-width: 80rem;
 
 }
-.container  {
-    width: 100%;   
    
-}
+   
+/* flex-column and flex-center created to display the high score and start button in a center column*/
 .flex-column {
     display: flex;
     flex-direction: column;
@@ -42,6 +41,19 @@ h1 {
     justify-content: center;
     align-items: center;
 }
-#home-page {
 
+/* css for high score and start button*/
+.btn {
+    font-size: 2rem;
+    padding: 1rem 0;
+    width: 20rem;
+    border: 0.3rem solid #2E67F8;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    color: #2E67F8;
+    background-color: transparent;
+    text-decoration: none;
+    text-align: center;
 }
+/* lightsaber cursor import taken from https://www.cursors-4u.com/cursor/2005/07/07/oth24.html*/
+ * {cursor: url(https://cur.cursors-4u.net/others/oth-1/oth24.cur), auto !important;} /* End https://www.cursors-4u.com */
