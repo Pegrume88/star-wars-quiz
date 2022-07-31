@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Orbitron:wght@400;700&family=Oswald:wght@300&display=swap');
+
 /* root style added for all pages */
 :root{
     background-image: url(assets/images/starwars-cover.jpeg);
@@ -44,20 +45,16 @@ h1 {
 
 /* css for high score and start button*/
 .btn {
-    font-size: 2rem;
+    font-size: 2.4rem;
     padding: 1rem 0;
     width: 20rem;
     border: 0.1rem  ;
-    
-    
     margin-bottom: 2rem;
     color: #fff;
     text-shadow:
-      /* White glow */
       0 0 7px #fff,
       0 0 10px #fff,
       0 0 21px #fff,
-      /* Green glow */
       0 0 42px #0fa,
       0 0 82px #0fa,
       0 0 92px #0fa,
@@ -66,6 +63,13 @@ h1 {
     background-color: transparent;
     text-decoration: none;
     text-align: center;
+}
+
+.btn:hover{
+    cursor: pointer;
+   font-size: 3rem;
+    transform: scale();
+    transition: transform 150ms;
 }
 /* lightsaber cursor import taken from https://www.cursors-4u.com/cursor/2005/07/07/oth24.html*/
  * {cursor: url(https://cur.cursors-4u.net/others/oth-1/oth24.cur), auto !important;} /* End https://www.cursors-4u.com */
