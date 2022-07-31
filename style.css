@@ -29,19 +29,19 @@ h1 {
     max-width: 80rem;
 
 }
-.container, a {
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    margin-bottom: 2rem;
+.container  {
+    width: 100%;   
+   
 }
 .flex-column {
     display: flex;
     flex-direction: column;
 
 }
-
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
 #home-page {
 
 }
