@@ -20,6 +20,10 @@ h1 {
     margin-bottom: 5rem;
     text-align: center;
 }
+h2 {
+   padding-bottom: 5rem;
+   font-size: 3.8rem;
+}
 /* container class to center text and quiz to the center of the page*/
 .container {
     width: 100vw;

@@ -4,5 +4,24 @@
     width: 100%;
     font-size: 1.8rem;
     border: 0.1rem solid goldenrod;
+    border-radius: 15px;
     background-color: transparent;
+}
+/* css for the prefixes A,B,C,D */
+.answer-prefix{
+    padding: 1.7rem 2.5rem;
+    background-color: goldenrod;
+    color: black;
+    border-radius: 10px;
+}
+/* css for each of the answer option */
+.answer-text {
+    padding: 1.5rem;
+}
+
+.answer-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 goldenrod;
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
 }
