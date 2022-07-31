@@ -1,6 +1,8 @@
+/* css for the answer container*/
 .answer-container {
     display: flex;
     margin-bottom: 0.9rem;
+    
     width: 100%;
     font-size: 1.8rem;
     border: 0.1rem solid goldenrod;
@@ -17,6 +19,7 @@
 /* css for each of the answer option */
 .answer-text {
     padding: 1.5rem;
+    
 }
 
 .answer-container:hover {
