@@ -1,0 +1,8 @@
+.answer-container {
+    display: flex;
+    margin-bottom: 0.9rem;
+    width: 100%;
+    font-size: 1.8rem;
+    border: 0.1rem solid goldenrod;
+    background-color: transparent;
+}
