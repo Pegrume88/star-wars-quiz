@@ -47,10 +47,22 @@ h1 {
     font-size: 2rem;
     padding: 1rem 0;
     width: 20rem;
-    border: 0.3rem solid #2E67F8;
-    border-radius: 15px;
-    margin-bottom: 1rem;
-    color: #2E67F8;
+    border: 0.1rem  ;
+    
+    
+    margin-bottom: 2rem;
+    color: #fff;
+    text-shadow:
+      /* White glow */
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      /* Green glow */
+      0 0 42px #0fa,
+      0 0 82px #0fa,
+      0 0 92px #0fa,
+      0 0 102px #0fa,
+      0 0 151px #0fa;
     background-color: transparent;
     text-decoration: none;
     text-align: center;
