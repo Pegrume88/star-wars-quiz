@@ -155,14 +155,18 @@ choices.forEach( choice => {
         const selectedAnswer = selectedChoice.dataset["number"];
 
         // constant to apply correct class to incorrect and correct answer
-        const classToApply = 'incorrect';
-        if (selectedAnswer == currentQuestion.answer){
-            classToApply = 'correct';
-        }
+        const classToApply = selectedAnswer == currentQuestion.answer ? "correct"
+: "incorrect";
 
         selectedChoice.parentElement.classList.add(classToApply);
 
-        getNewQuestions();
+        //time out added to allow time before removing class
+
+        setTimeout (() => {
+            selectedChoice.parentElement.classList.remove(classToApply);
+            getNewQuestions();
+        }, 1000); 
+        
     });
 });
 

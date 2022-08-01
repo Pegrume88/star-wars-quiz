@@ -33,9 +33,11 @@
 
 /* css to change color of correct and incorrect answer*/
 .correct {
- background-color:2px 2px 8px #7bff00 ;
+    background-color: #7bff00;
+ box-shadow:2px 2px 8px #7bff00 ;
 }
 
 .incorrect {
- background-color:2px 2px 8px #ff0000cf ;
+    background-color: red;
+ box-shadow:2px 2px 8px #ff0000cf ;
 }
