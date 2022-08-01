@@ -7,6 +7,8 @@ let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
 
+/* Array of all the questions and answers, with the correct answer*/ 
+
 let questions = [
     {
         question: "What is Baby Yoda's real name?",
@@ -107,5 +109,8 @@ let questions = [
    
 ]
 
-
-
+/**
+ * Constants for scoring 10 points for correct answer and the max amount of questions in this quiz
+ */
+const SCORE_POINT = 10;
+const MAX_QUESTIONS = 12;
