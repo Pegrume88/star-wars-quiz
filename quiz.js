@@ -114,3 +114,19 @@ let questions = [
  */
 const SCORE_POINT = 10;
 const MAX_QUESTIONS = 12;
+/** start game function with score,question counter, copied array of question and get new question function */
+startGame = () =>
+{
+    questionCounter = 0;
+    score = 0;
+    availableQuestions = [...questions];
+    getNewQuestions();
+}
+/** function for selecting new random question and displaying question text */
+getNewQuestions = () => {
+  questionCounter++ ;
+  const questionIndex = Math.floor(Math.random() * availableQuestions.length);
+  currentQuestion = availableQuestions[questionIndex];
+  question.innerText = currentQuestion.question;
+
+}
