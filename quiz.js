@@ -1,8 +1,8 @@
 const question = document.getElementById('question');
-const answers = Array.from(document.getElementsByClassName("answer-text"));
+const choices = Array.from(document.getElementsByClassName("choice-text"));
 
 let currentQuestion = {};
-let acceptingAnswers = true;
+let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
@@ -121,12 +121,49 @@ startGame = () =>
     score = 0;
     availableQuestions = [...questions];
     getNewQuestions();
-}
+};
+
 /** function for selecting new random question and displaying question text */
+
 getNewQuestions = () => {
+
+    //when max questions are reached send player to end page
+
+    if (availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS){
+        return window.location.assign("/end.html")
+    }
   questionCounter++ ;
   const questionIndex = Math.floor(Math.random() * availableQuestions.length);
   currentQuestion = availableQuestions[questionIndex];
   question.innerText = currentQuestion.question;
 
-}
+    choices.forEach( choice => {
+        const number = choice.dataset ["number"];
+        choice.innerText = currentQuestion["choice" + number ];
+    })
+    /** removing answered questions */
+    availableQuestions.splice(questionIndex, 1);
+
+    acceptingAnswers = true;
+};
+
+choices.forEach( choice => {
+    choice.addEventListener("click", e => {
+        if (!acceptingAnswers) return;
+        acceptingAnswers = false;
+        const selectedChoice = e.target;
+        const selectedAnswer = selectedChoice.dataset["number"];
+
+        // constant to apply correct class to incorrect and correct answer
+        const classToApply = 'incorrect';
+        if (selectedAnswer == currentQuestion.answer){
+            classToApply = 'correct';
+        }
+
+        selectedChoice.parentElement.classList.add(classToApply);
+
+        getNewQuestions();
+    });
+});
+
+startGame();

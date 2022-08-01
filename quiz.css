@@ -17,8 +17,10 @@
     border-radius: 10px;
 }
 /* css for each of the answer option */
-.answer-text {
+.choice-text {
     padding: 1.5rem;
+    width: 100%;
+    
     
 }
 
@@ -27,4 +29,13 @@
     box-shadow: 0 0.4rem 1.4rem 0 goldenrod;
     transform: translateY(-0.1rem);
     transition: transform 150ms;
+}
+
+/* css to change color of correct and incorrect answer*/
+.correct {
+ background-color:2px 2px 8px #7bff00 ;
+}
+
+.incorrect {
+ background-color:2px 2px 8px #ff0000cf ;
 }
