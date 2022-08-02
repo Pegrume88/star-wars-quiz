@@ -1,6 +1,7 @@
 const question = document.querySelector('#question');
 const choices = Array.from(document.querySelectorAll('.choice-text'));
 const questionCounterText = document.getElementById('questionCounter');
+const ScoreText = document.getElementById('score')
 
 let currentQuestion = {};
 let acceptingAnswers = false;
@@ -128,10 +129,13 @@ startGame = () =>
 
 getNewQuestions = () => {
 
-    //when max questions are reached send player to end page
+    
 
     if (availableQuestions.length == 0 || questionCounter >= MAX_QUESTIONS){
-        return window.location.assign("/end.html")
+        localStorage.setItem("mostRecentScore", score);
+
+//when max questions are reached send player to end page
+        return window.location.assign("/end.html");
     }
   questionCounter++ ;
   questionCounterText.innerText = questionCounter + "/" + MAX_QUESTIONS;
@@ -160,6 +164,11 @@ choices.forEach( choice => {
         // constant to apply correct class to incorrect and correct answer
         const classToApply = selectedAnswer == currentQuestion.answer ? "correct"
 : "incorrect";
+        
+// increment score by to for correct answer
+        if(classToApply === "correct") {
+            incrementScore(SCORE_POINT);
+        }
 
         selectedChoice.parentElement.classList.add(classToApply);
 
@@ -172,5 +181,10 @@ choices.forEach( choice => {
         
     });
 });
+
+incrementScore = num => {
+    score += num;
+    ScoreText.innerText = score;
+}
 
 startGame();
