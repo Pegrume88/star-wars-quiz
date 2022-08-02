@@ -1,5 +1,6 @@
 const question = document.querySelector('#question');
 const choices = Array.from(document.querySelectorAll('.choice-text'));
+const questionCounterText = document.getElementById('questionCounter');
 
 let currentQuestion = {};
 let acceptingAnswers = false;
@@ -129,10 +130,12 @@ getNewQuestions = () => {
 
     //when max questions are reached send player to end page
 
-    if (availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS){
+    if (availableQuestions.length == 0 || questionCounter >= MAX_QUESTIONS){
         return window.location.assign("/end.html")
     }
   questionCounter++ ;
+  questionCounterText.innerText = questionCounter + "/" + MAX_QUESTIONS;
+  
   const questionIndex = Math.floor(Math.random() * availableQuestions.length);
   currentQuestion = availableQuestions[questionIndex];
   question.innerText = currentQuestion.question;
