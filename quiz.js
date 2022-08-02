@@ -1,5 +1,5 @@
-const question = document.getElementById('question');
-const choices = Array.from(document.getElementsByClassName("choice-text"));
+const question = document.querySelector('#question');
+const choices = Array.from(document.querySelectorAll('.choice-text'));
 
 let currentQuestion = {};
 let acceptingAnswers = false;
