@@ -44,8 +44,7 @@
 
 #hud {
     display: flex;
-    justify-content: space-around;
-    margin-top: 4rem;
+    justify-content: space-between;
   }
   
   .hud-prefix {

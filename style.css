@@ -17,7 +17,7 @@
 
 h1 {
     font-size: 5.3rem;
-    margin-bottom: 5rem;
+    margin-bottom: 3.8rem;
     text-align: center;
     text-shadow: 2px 2px 8px goldenrod; 
 }
@@ -26,10 +26,7 @@ h2 {
    font-size: 4.2rem;
    font-weight: 700;
 }
-h3 {
-    font-size: 2.8rem;
-    font-weight: 500;
-}
+
 /* container class to center text and quiz to the center of the page*/
 .container {
     width: 100vw;
