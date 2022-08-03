@@ -135,7 +135,7 @@ getNewQuestions = () => {
         localStorage.setItem("mostRecentScore", score);
 
 //when max questions are reached send player to end page
-        return window.location.assign("/end.html");
+        return window.location.assign("end.html");
     }
   questionCounter++ ;
   questionCounterText.innerText = questionCounter + "/" + MAX_QUESTIONS;
