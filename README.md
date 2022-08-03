@@ -1,4 +1,4 @@
-# [STAR WARS QUIZ] ()
+# [STAR WARS QUIZ] (https://pegrume88.github.io/quiz/index.html)
 
 Star Wars has been one of the most popular franchises since the late 70s, with Movies and TV Series regulary being released. I decided to create a quiz that will test the users knowledge to see if they know as much as they think they know.
 
@@ -56,8 +56,10 @@ Once the answer has been clicked you will be moved on to a new randomly selected
 
 
 
-
-
+## Future Features
+* Options of different difficulties to choose from.
+* A choice on if you want choose the light or the dark side quiz
+* An option to log and store high scores with a username
 
 
 
