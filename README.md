@@ -1,4 +1,4 @@
-# [STAR WARS QUIZ] (https://pegrume88.github.io/quiz/index.html)
+# [STAR WARS QUIZ](https://pegrume88.github.io/quiz/index.html)
 
 Star Wars has been one of the most popular franchises since the late 70s, with Movies and TV Series regulary being released. I decided to create a quiz that will test the users knowledge to see if they know as much as they think they know.
 
@@ -7,8 +7,8 @@ Star Wars has been one of the most popular franchises since the late 70s, with M
 
 ## Goals
 
-* Create fun interactive quiz that fans of Star Wars will enjoy playing.
-* To make the quiz intuitive to use and provide satisfying feedback for the user.
+* Create a fun interactive quiz that fans of Star Wars will enjoy playing.
+* To make the quiz intuitive to use, and provides satisfying feedback for the user.
 * Design a quiz that is aesthetically pleasing.
 * To make the quiz responsive.
 
