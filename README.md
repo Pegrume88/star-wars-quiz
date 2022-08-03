@@ -1,8 +1,8 @@
-# [STAR WARS QUIZ] (link to quiz here)
+# [STAR WARS QUIZ] ()
 
 Star Wars has been one of the most popular franchises since the late 70s, with Movies and TV Series regulary being released. I decided to create a quiz that will test the users knowledge to see if they know as much as they think they know.
 
-![hero image](/assets/css/ReadMe-images/responsive.png)
+
 
 
 ## Goals
@@ -17,6 +17,7 @@ Star Wars has been one of the most popular franchises since the late 70s, with M
 
 
 ------
+![Responsive](/readMe-images/responsive.png)
 
 
 
@@ -32,7 +33,7 @@ Below the Star Wars Quiz heading we have the start button that will link you to 
 
 On loading of the page there will be star wars music playing in the background and the curser has been changed to a lightsaber, this curser was obtained from [curser-4u](https://www.cursors-4u.com/star_wars/).
 
-![nav bar](/assets/css/ReadMe-images/navigation-bar.png)
+![home page](/readMe-images/home.page.png)
 
 ## Question page
 
@@ -41,28 +42,21 @@ there is a question counter and a point scorer above the question. Below the que
 the is a hover effect to indicate wich option your curser is over. Once you have chosen your answer it either glows green for correct or red for incorrect. The green and red glow were created to match the glow of a light saber. The green indicating the color of the jedi and red indicating the color of the dark side.
 
 Once the answer has been clicked you will be moved on to a new randomly selected question and the question counter will increment by 1 and the score if correct will increment by 10.
+![home page](/readMe-images/quiz-correct.png)
 
+![correct answer](/readMe-images/Quiz-wrong.jpeg.png)
 ## End page
 
   Once you have completed all the questions you will be directed to the end page which will display your final score and give a link back to the home page.
   I kept a conisten style though out the pages to creat an aesthetic flow and to make the site cohesive.
 
  
-![hero image](/assets/css/ReadMe-images/hero-image.png)
+![end page](/readMe-images/endpage.png)
 
 
 
 
 
-
-
-
-
-
-
-  
-
-  
 
 
 
@@ -77,13 +71,14 @@ Once the answer has been clicked you will be moved on to a new randomly selected
 
 ## Testing
 
+
 ### Browser Test
 I have tested the site on Google Chrome, Firefox and Safari using [lambdatest](https://app.lambdatest.com/). Using lambdatest i can confirm my site works and function on all three browsers.
 
 ### lighthouse test
-I have run my website through lighthouse scoring high in every area apart from performance. I attempted to fix this, by going through my css and double checking for any unnecessary css that could be affecting the performance score. I managed to increase from 72 to 79, i was unable to increase it it further. The website does not show any signs of lagging and loads pages promtly with no issue.
+I have run my website through lighthouse scoring high in every area.
 
-![lighthouse scores](/assets/css/ReadMe-images/lighthouse.png)
+![lighthouse scores](/readMe-images/lighthouse-mobile.png)
 
 ### Site Validator
 
@@ -92,6 +87,19 @@ I have run my website through lighthouse scoring high in every area apart from p
 
 **CSS**
 * No errors returned when passing through [jigsaw](https://jigsaw.w3.org/css-validator/)
+
+**JavaScript**
+*  No errors found when passing through [jahint](https://jshint.com/https://jshint.com/)
+
+Metrics
+There are 8 functions in this file.
+
+Function with the largest signature take 1 arguments, while the median is 0.5.
+
+Largest function has 11 statements in it, while the median is 2.
+
+The most complex function has a cyclomatic complexity value of 4 while the median is 1.
+
 
 ## Deployment
 
@@ -102,17 +110,21 @@ The site was deployed to GitHub pages. The steps to deploy a site are as follows
   3. Under **Source**, select the branch to **master**, then click **save**.
   4. Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
 
-![deploy image](/assets/css/ReadMe-images/deploy.png)
+
 
 ## Content
 
 ### Credits/Media
-  * Content of text was taken from the home pages of the bars,resaurants,locations and musuems mentioned in my site.
-  * The styling of the hero images was inspired by the [love-running](https://code-institute-org.github.io/love-running-2.0/index.html)
-  * I used the styling influences for my sign up form from [w3schools](https://www.w3schools.com/)
+  
+  * This quiz was inpsired by the love maths quiz.
+  * question counter and score diplay influenced from these sources [BrianDesign](https://www.youtube.com/watch?v=f4fB9Xg2JEY&ab_channel=BrianDesign)
+  * This tutorial helped me implement flex box in this webpage [Flexbox](https://www.youtube.com/watch?v=JJSoEo8JSnc&ab_channel=TraversyMedia)
+
   * I refered to web coding & develepment for dummies.
   * All Icons used were obtained from [font-awesome](https://fontawesome.com/)
-  * All pictures were obtained through google images due to being location sepcific.
+  * The lightsaber curser was taken from [curser-4u](https://www.cursors-4u.com/star_wars/).
+  * The main fonst style was taken from google [fonts](https://fonts.google.com/).
+  * All pictures were obtained through google images.
 
 
 

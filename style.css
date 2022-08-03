@@ -77,7 +77,7 @@ h2 {
 .btn:hover{
     cursor: pointer;
    font-size: 3rem;
-    transform: scale();
+    
     transition: transform 150ms;
 }
 /* lightsaber cursor import taken from https://www.cursors-4u.com/cursor/2005/07/07/oth24.html*/
