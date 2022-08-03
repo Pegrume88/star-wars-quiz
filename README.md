@@ -58,8 +58,8 @@ Once the answer has been clicked you will be moved on to a new randomly selected
 
 ## Future Features
 * Options of different difficulties to choose from.
-* A choice on if you want choose the light or the dark side quiz
-* An option to log and store high scores with a username
+* A choice on if you want choose the light or the dark side quiz.
+* An option to log and store high scores with a username.
 
 
 
@@ -129,4 +129,5 @@ The site was deployed to GitHub pages. The steps to deploy a site are as follows
   * All pictures were obtained through google images.
 
 
-
+## Bugs
+The only bug seems to be the music playing on the home page when you load the site. I have trouble shooted this and seeked help from student support, who were unable to work out why it would only play if you would go to the home page via the final score page.
