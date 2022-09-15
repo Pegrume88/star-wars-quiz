@@ -120,11 +120,7 @@ let acceptingAnswers = false;
 let questionCounter = 0;
 let availableQuestions = [];
 
-const time_line = document.querySelector("header .time_line");
-const timeText = document.querySelector(".timer .time_left_txt");
-const timeCount = document.querySelector(".timer .timer_sec");
 
-let timeValue = 20;
 
 /** start game function with score,question counter, copied array of question and get new question function */
 startGame = () =>
@@ -169,9 +165,9 @@ getNewQuestions = () => {
     /** removing answered questions */
     availableQuestions.splice(questionIndex, 1);
 
-    acceptingAnswers = true;
-//question countdown timer
     
+    acceptingAnswers = true;
+
 
 choices.forEach( option => {
     option.addEventListener("click", e => {
@@ -179,19 +175,8 @@ choices.forEach( option => {
         acceptingAnswers = false;
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset["number"];
-        var timeleft = 5;
-        var downloadTimer = setInterval(function(){
-        if(timeleft <= 0){
-        
-        clearInterval(downloadTimer);
-        document.getElementById("countdown").innerHTML = "time out", getNewQuestions()
-        
-        } else {
-            document.getElementById("countdown").innerHTML = timeleft + " ";
-        }
-        timeleft -= 1;
-        }, 1000);
-};
+       
+
         // constant to apply correct class to incorrect and correct answer
         const classToApply = selectedAnswer == currentQuestion.answer ? "correct"
 : "incorrect";
@@ -212,7 +197,23 @@ choices.forEach( option => {
         }, 1000); 
         
     });
-};
+});
 
+//question countdown timer
+
+    let timeleft = 5;
+    let downloadTimer = setInterval(function(){
+    if(timeleft <= 0){
+
+    clearInterval(downloadTimer);
+    document.getElementById("countdown").innerHTML = "time out", getNewQuestions()
+
+
+    } else {
+        document.getElementById("countdown").innerHTML = timeleft + " ";
+    }
+    timeleft -= 1;
+    }, 1000);
+};
 
 startGame();
