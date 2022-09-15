@@ -120,6 +120,12 @@ let acceptingAnswers = false;
 let questionCounter = 0;
 let availableQuestions = [];
 
+const time_line = document.querySelector("header .time_line");
+const timeText = document.querySelector(".timer .time_left_txt");
+const timeCount = document.querySelector(".timer .timer_sec");
+
+let timeValue = 20;
+
 /** start game function with score,question counter, copied array of question and get new question function */
 startGame = () =>
 {
@@ -127,6 +133,7 @@ startGame = () =>
     score = 0;
     availableQuestions = [...questions];
     getNewQuestions();
+
 };
 
 //show incremented score
@@ -142,6 +149,7 @@ getNewQuestions = () => {
 
     if (availableQuestions.length == 0 || questionCounter >= TOTAL_QUESTIONS){
         localStorage.setItem("mostRecentScore", score);
+
 
 //when max questions are reached send player to end page
         return window.location.assign("end.html");
@@ -162,7 +170,8 @@ getNewQuestions = () => {
     availableQuestions.splice(questionIndex, 1);
 
     acceptingAnswers = true;
-};
+//question countdown timer
+    
 
 choices.forEach( option => {
     option.addEventListener("click", e => {
@@ -170,7 +179,19 @@ choices.forEach( option => {
         acceptingAnswers = false;
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset["number"];
-
+        var timeleft = 5;
+        var downloadTimer = setInterval(function(){
+        if(timeleft <= 0){
+        
+        clearInterval(downloadTimer);
+        document.getElementById("countdown").innerHTML = "time out", getNewQuestions()
+        
+        } else {
+            document.getElementById("countdown").innerHTML = timeleft + " ";
+        }
+        timeleft -= 1;
+        }, 1000);
+};
         // constant to apply correct class to incorrect and correct answer
         const classToApply = selectedAnswer == currentQuestion.answer ? "correct"
 : "incorrect";
@@ -182,6 +203,7 @@ choices.forEach( option => {
 
         selectedChoice.parentElement.classList.add(classToApply);
 
+
         //time delay before moving to next question
 
             setTimeout (() => {
@@ -190,8 +212,7 @@ choices.forEach( option => {
         }, 1000); 
         
     });
-});
-
+};
 
 
 startGame();
