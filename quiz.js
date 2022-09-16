@@ -1,8 +1,6 @@
+/* All the questions and answers, with the correct answer*/
 
-/* All the questions and answers, with the correct answer*/ 
-
-let questions = [
-    {
+let questions = [{
         question: "What is Baby Yoda's real name?",
         option1: "Goku",
         option2: "Grogu",
@@ -101,13 +99,11 @@ let questions = [
 
 ]
 
-/**
- * scoring 10 points for correct answer + display score
- */
-const POINTS = 10;
 
-const ScoreText = document.getElementById('score')
-let score = 0;
+const POINTS = 10;//points scored for correct answer
+
+const ScoreText = document.getElementById('score')//adjust score display
+let score = 0;//starting score
 
 const TOTAL_QUESTIONS = 12;
 const question = document.querySelector('#question');
@@ -123,8 +119,7 @@ let availableQuestions = [];
 
 
 /** start game function with score,question counter, copied array of question and get new question function */
-startGame = () =>
-{
+startGame = () => {
     questionCounter = 0;
     score = 0;
     availableQuestions = [...questions];
@@ -132,7 +127,7 @@ startGame = () =>
 
 };
 
-//show incremented score
+// increment score and display
 incrementScore = num => {
     score += num;
     ScoreText.innerText = score;
@@ -143,77 +138,77 @@ incrementScore = num => {
 
 getNewQuestions = () => {
 
-    if (availableQuestions.length == 0 || questionCounter >= TOTAL_QUESTIONS){
+    if (availableQuestions.length == 0 || questionCounter >= TOTAL_QUESTIONS) {
         localStorage.setItem("mostRecentScore", score);
 
 
-//when max questions are reached send player to end page
+        //when max questions are reached send player to end page
         return window.location.assign("end.html");
     }
-  questionCounter++ ;
-  questionCounterText.innerText = questionCounter + "/" + TOTAL_QUESTIONS;
+    questionCounter++;
+    questionCounterText.innerText = questionCounter + "/" + TOTAL_QUESTIONS;
 
-//random question selection  
-  const questionIndex = Math.floor(Math.random() * availableQuestions.length);
-  currentQuestion = availableQuestions[questionIndex];
-  question.innerText = currentQuestion.question;
+    //random question selection  
+    const questionIndex = Math.floor(Math.random() * availableQuestions.length);
+    currentQuestion = availableQuestions[questionIndex];
+    question.innerText = currentQuestion.question;
 
-    choices.forEach( option => {
-        const number = option.dataset ["number"];
-        option.innerText = currentQuestion["option" + number ];
+    choices.forEach(option => {
+        const number = option.dataset["number"];
+        option.innerText = currentQuestion["option" + number];
     })
     /** removing answered questions */
     availableQuestions.splice(questionIndex, 1);
 
-    
+
     acceptingAnswers = true;
 
 
-choices.forEach( option => {
-    option.addEventListener("click", e => {
-        if (!acceptingAnswers) return;
-        acceptingAnswers = false;
-        const selectedChoice = e.target;
-        const selectedAnswer = selectedChoice.dataset["number"];
-       
-
-        // constant to apply correct class to incorrect and correct answer
-        const classToApply = selectedAnswer == currentQuestion.answer ? "correct"
-: "incorrect";
-        
-// increment score by 10 for correct answer
-        if(classToApply === "correct") {
-            incrementScore(POINTS);
-        }
-
-        selectedChoice.parentElement.classList.add(classToApply);
+    choices.forEach(option => {
+        option.addEventListener("click", e => {
+            if (!acceptingAnswers) return;
+            acceptingAnswers = false;
+            const selectedChoice = e.target;
+            const selectedAnswer = selectedChoice.dataset["number"];
 
 
-        //time delay before moving to next question
+            // constant to apply correct class to incorrect and correct answer
+            const classToApply = selectedAnswer == currentQuestion.answer ? "correct" :
+                "incorrect";
 
-            setTimeout (() => {
-            selectedChoice.parentElement.classList.remove(classToApply);
-            getNewQuestions();
-        }, 1000); 
-        
+            // increment score by 10 for correct answer
+            if (classToApply === "correct") {
+                incrementScore(POINTS);
+            }
+
+            selectedChoice.parentElement.classList.add(classToApply);
+
+
+            //time delay before moving to next question
+
+            setTimeout(() => {
+                selectedChoice.parentElement.classList.remove(classToApply);
+                getNewQuestions();
+            }, 1000);
+
+        });
     });
-});
 
-//question countdown timer
-
+    //question countdown timer
+/**
     let timeleft = 5;
-    let downloadTimer = setInterval(function(){
-    if(timeleft <= 0){
+    let downloadTimer = setInterval(function () {
+        if (timeleft <= 0) {
 
-    clearInterval(downloadTimer);
-    document.getElementById("countdown").innerHTML = "time out", getNewQuestions()
+            clearInterval(downloadTimer);
+            document.getElementById("countdown").innerHTML = "time out", getNewQuestions()
 
 
-    } else {
-        document.getElementById("countdown").innerHTML = timeleft + " ";
-    }
-    timeleft -= 1;
-    }, 1000);
+        } else {
+            document.getElementById("countdown").innerHTML = timeleft + " ";
+        }
+        timeleft -= 1;
+    }, 1000);**/
 };
 
 startGame();

@@ -11,7 +11,7 @@
 <body>
 
     <audio autoplay src="assets/music/quiz-page-music.mp3"></audio>
-    <!--Question and answer container-->
+    <!--question counter, countdown timer and score display-->
     <div class="container">
        
         <div id="quiz" class="justify-center flex-column">
@@ -24,7 +24,12 @@
                 
               </h1>
             </div>
-            <div><h1 class="hud-main-text" id="countdown"></h1></div>
+            <div>
+              <p class="hud-prefix">
+                Time Left
+              </p>
+              <h1 class="hud-main-text" id="countdown"></h1>
+            </div>
             <div>
               <p class="hud-prefix">
                 Score
@@ -34,25 +39,26 @@
               </h1>
             </div>
           </div>
+           <!--Question and answer container-->
             <h2 id="question">what is the answer to this question?</h2>
             <div class="answer-container">
                 <p class="answer-prefix">A: </p>
-                <p class="choice-text" data-number="1">option1</p>
+                <button class="choice-text" data-number="1">option1</button>
             </div>
             <div class="answer-container">
                 <p class="answer-prefix">B: </p>
-                <p class="choice-text" data-number="2">option2</p>
+                <button class="choice-text" data-number="2">option2</button>
             </div>
             <div class="answer-container">
                 <p class="answer-prefix">C: </p>
-                <p class="choice-text" data-number="3">option3</p>
+                <button class="choice-text" data-number="3">option3</button>
             </div>
             <div class="answer-container">
                 <p class="answer-prefix">D: </p>
-                <p class="choice-text" data-number="4">option4</p>
+                <button class="choice-text" data-number="4">option4</button>
             </div>
         </div>
-     
+
     </div>
     <script src="quiz.js"></script>
 </body>

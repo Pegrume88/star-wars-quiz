@@ -1,5 +1,5 @@
 /* css for the answer container*/
-.answer-container {
+.answer-container{
     display: flex;
     margin-bottom: 0.9rem;
     
@@ -16,10 +16,19 @@
     color: black;
     border-radius: 10px;
 }
+button {
+    color: goldenrod;
+    background-color: transparent;
+    border: none;
+    
+    font-size: 1.8rem;
+    
+}
 /* css for each of the answer option */
 .choice-text {
     padding: 1.5rem;
     width: 100%;
+    
     
     
 }
