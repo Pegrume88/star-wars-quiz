@@ -116,7 +116,8 @@ let currentQuestion = {};
 let questionCounter = 0;
 let availableQuestions = [];
 
-
+let downloadTimer = null;
+let timeleft = 5;
 
 /** start game function with score,question counter, copied array of question and get new question function */
 startGame = () => {
@@ -166,8 +167,13 @@ getNewQuestions = () => {
 
     choices.forEach(option => {
         option.addEventListener("click", e => {
+
             if (!acceptingAnswers) return;
+
             acceptingAnswers = false;
+            clearInterval(downloadTimer);
+            timeleft = 5;
+            document.getElementById("countdown").innerHTML = timeleft + " ";
             const selectedChoice = e.target;
             const selectedAnswer = selectedChoice.dataset["number"];
 
@@ -195,20 +201,20 @@ getNewQuestions = () => {
     });
 
     //question countdown timer
-/**
-    let timeleft = 5;
-    let downloadTimer = setInterval(function () {
+
+
+    downloadTimer = setInterval(function () {
         if (timeleft <= 0) {
 
             clearInterval(downloadTimer);
             document.getElementById("countdown").innerHTML = "time out", getNewQuestions()
-
+            timeleft = 6;
 
         } else {
             document.getElementById("countdown").innerHTML = timeleft + " ";
         }
         timeleft -= 1;
-    }, 1000);**/
+    }, 1000);
 };
 
 startGame();
