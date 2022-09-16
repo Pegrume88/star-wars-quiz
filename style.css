@@ -19,7 +19,7 @@ h1 {
     font-size: 5.3rem;
     margin-bottom: 3.8rem;
     text-align: center;
-    text-shadow: 2px 2px 8px goldenrod; 
+    text-shadow: 2px 2px 8px goldenrod;
 }
 h2 {
    margin-bottom: 4.8rem;
@@ -41,7 +41,7 @@ h2 {
 }
    
    
-/* flex-column and flex-center created to display the high score and start button in a center column*/
+/* flex-column and flex-center created to display  start button in a center column*/
 .flex-column {
     display: flex;
     flex-direction: column;

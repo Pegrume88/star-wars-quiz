@@ -106,12 +106,12 @@ const ScoreText = document.getElementById('score')//adjust score display
 let score = 0;//starting score
 
 const TOTAL_QUESTIONS = 12;
-const question = document.querySelector('#question');
-const questionCounterText = document.getElementById('questionCounter');
-const choices = Array.from(document.querySelectorAll('.choice-text'));
+let question = document.querySelector('#question');
+let questionCounterText = document.getElementById('questionCounter');
+let choices = Array.from(document.querySelectorAll('.choice-text'));
 
 let currentQuestion = {};
-let acceptingAnswers = false;
+
 
 let questionCounter = 0;
 let availableQuestions = [];

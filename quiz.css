@@ -2,7 +2,6 @@
 .answer-container{
     display: flex;
     margin-bottom: 0.9rem;
-    
     width: 100%;
     font-size: 1.8rem;
     border: 0.1rem solid goldenrod;
@@ -16,23 +15,21 @@
     color: black;
     border-radius: 10px;
 }
+/* button styling*/
 button {
     color: goldenrod;
     background-color: transparent;
     border: none;
-    
     font-size: 1.8rem;
-    
+
 }
 /* css for each of the answer option */
 .choice-text {
     padding: 1.5rem;
     width: 100%;
-    
-    
-    
-}
 
+}
+/* glow effect when hovering over button*/
 .answer-container:hover {
     cursor: pointer;
     box-shadow: 0 0.4rem 1.4rem 0 goldenrod;
@@ -50,7 +47,7 @@ button {
     background-color: red;
  box-shadow:2px 2px 8px #ff0000cf ;
 }
-
+/* styling for  display hud*/
 #hud {
     display: flex;
     justify-content: space-between;
