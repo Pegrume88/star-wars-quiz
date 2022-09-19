@@ -80,5 +80,19 @@ h2 {
     
     transition: transform 150ms;
 }
+
+.form-button {
+    top:10%;
+    font-size: 13px;
+    background-color: transparent;
+    border: none;
+    color: goldenrod;
+    box-shadow: 0px 0px 2px 2px rgb(215, 155, 16);
+
+}
+.form-button:hover {
+    cursor: pointer;
+   font-size: 3rem;
+}
 /* lightsaber cursor import taken from https://www.cursors-4u.com/cursor/2005/07/07/oth24.html*/
  * {cursor: url(https://cur.cursors-4u.net/others/oth-1/oth24.cur), auto !important;} /* End https://www.cursors-4u.com */
