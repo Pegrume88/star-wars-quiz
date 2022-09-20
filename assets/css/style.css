@@ -26,6 +26,16 @@ h2 {
    font-size: 4.2rem;
    font-weight: 700;
 }
+.rule-container {
+    text-align: center;
+}
+.rules-text {
+    font-size: 18px;
+    font-weight: 300;
+}
+.rules-header {
+    font-size: 28px;
+}
 
 /* container class to center text and quiz to the center of the page*/
 .container {

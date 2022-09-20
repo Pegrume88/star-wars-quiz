@@ -17,7 +17,7 @@ formValidation = () => {
 }
 
 
-
+// emailjs syntax used here for user to recieve score in email
 
 emailjs.init('U6-TXMy0LULArZsgS');
 finalScore.innerText = mostRecentScore;

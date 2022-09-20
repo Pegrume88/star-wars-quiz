@@ -100,24 +100,23 @@ let questions = [{
 ]
 
 
-const POINTS = 10;//points scored for correct answer
+const POINTS = 10; //points scored for correct answer
 
-const ScoreText = document.getElementById('score')//adjust score display
-let score = 0;//starting score
+const ScoreText = document.getElementById('score') //adjust score display
+let score = 0; //starting score
 
+//question variables
 const TOTAL_QUESTIONS = 12;
 let question = document.querySelector('#question');
 let questionCounterText = document.getElementById('questionCounter');
 let choices = Array.from(document.querySelectorAll('.choice-text'));
-
 let currentQuestion = {};
-
-
 let questionCounter = 0;
 let availableQuestions = [];
 
+// question timer variables
 let downloadTimer = null;
-let timeleft = 5;
+let timeleft = 10;
 
 /** start game function with score,question counter, copied array of question and get new question function */
 startGame = () => {
@@ -172,7 +171,7 @@ getNewQuestions = () => {
 
             acceptingAnswers = false;
             clearInterval(downloadTimer);
-            timeleft = 5;
+            timeleft = 10;
             document.getElementById("countdown").innerHTML = timeleft + " ";
             const selectedChoice = e.target;
             const selectedAnswer = selectedChoice.dataset["number"];
@@ -208,7 +207,7 @@ getNewQuestions = () => {
 
             clearInterval(downloadTimer);
             document.getElementById("countdown").innerHTML = "time out", getNewQuestions()
-            timeleft = 6;
+            timeleft = 11;
 
         } else {
             document.getElementById("countdown").innerHTML = timeleft + " ";
