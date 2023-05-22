@@ -1,4 +1,4 @@
-# [STAR WARS QUIZ](https://pegrume88.github.io/quiz/index.html)
+# [STAR WARS QUIZ](https://pegrume88.github.io/star-wars-quiz/)
 
 Star Wars has been one of the most popular franchises since the late 70s, with Movies and TV Series regulary being released. I decided to create a quiz that will test the users knowledge to see if they know as much as they think they know.
 
